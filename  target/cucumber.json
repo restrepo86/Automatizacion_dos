@@ -1,0 +1,92 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 9,
+        "name": "El usuario inicia sesion en aplicativo de manera exitosa",
+        "description": "",
+        "id": "inicio-de-sesion-exitosa;el-usuario-inicia-sesion-en-aplicativo-de-manera-exitosa",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4614057471,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Que he ingresado a la pagina \"http://sahitest.com/demo/training/login.htm\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://sahitest.com/demo/training/login.htm",
+                  "offset": 30
+                }
+              ],
+              "location": "LoginStep.openPage(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 387628988,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "he Ingresado nombre de usuario y Password",
+            "match": {
+              "location": "LoginStep.setForm(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "user",
+                  "password"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "test",
+                  "secret"
+                ],
+                "line": 17
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 713383163,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "de click en el boton login",
+            "match": {
+              "location": "LoginStep.clickButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93398698,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "deberia acceder al aplicativo",
+            "match": {
+              "location": "LoginStep.getResult()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Inicio de sesion Exitosa",
+    "description": "\nComo usuario del aplicativo quiero acceder a mi vista predeterminda al ingresar \n\nusuario y contraseña correctas",
+    "id": "inicio-de-sesion-exitosa",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]
