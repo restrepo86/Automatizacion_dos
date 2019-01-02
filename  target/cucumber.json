@@ -3,19 +3,19 @@
     "line": 1,
     "elements": [
       {
-        "line": 9,
-        "name": "El usuario inicia sesion en aplicativo de manera exitosa",
+        "line": 3,
+        "name": "El usuario inicia sesion en aplicativo de manera exitosa y luego agrega libros al carro de compra",
         "description": "",
-        "id": "inicio-de-sesion-exitosa;el-usuario-inicia-sesion-en-aplicativo-de-manera-exitosa",
+        "id": "agregar-libros-al-carro-de-compras;el-usuario-inicia-sesion-en-aplicativo-de-manera-exitosa-y-luego-agrega-libros-al-carro-de-compra",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4614057471,
+              "duration": 4297507451,
               "status": "passed"
             },
-            "line": 11,
+            "line": 4,
             "name": "Que he ingresado a la pagina \"http://sahitest.com/demo/training/login.htm\"",
             "match": {
               "arguments": [
@@ -30,10 +30,161 @@
           },
           {
             "result": {
-              "duration": 387628988,
+              "duration": 287555418,
               "status": "passed"
             },
-            "line": 13,
+            "line": 5,
+            "name": "he Ingresado nombre de usuario y Password",
+            "match": {
+              "location": "LoginStep.setForm(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "usuario",
+                  "password"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "test",
+                  "secret"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 372451206,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "de click en el boton login",
+            "match": {
+              "location": "LoginStep.clickButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 292856371,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "seleccione la cantidad de libros",
+            "match": {
+              "location": "AddBooksStep.seleccioneLaCantidadDeLibros(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "libro",
+                  "cantidad"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "java",
+                  "3"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "ruby",
+                  "2"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "python",
+                  "1"
+                ],
+                "line": 13
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85845782,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "los agregue al carro de compras",
+            "match": {
+              "location": "AddBooksStep.losAgregueAlCarroDeCompras()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 45975264,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c1[2]\u003e but was:\u003c1[650]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat com.tns.prueba.steps.AddBooksStep.deberiaVerUnGranTotalDe(AddBooksStep.java:39)\n\tat ✽.Then deberia ver un gran total de \"1650\"(AddBoooks.feature:15)\n",
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "deberia ver un gran total de \"1650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1650",
+                  "offset": 30
+                }
+              ],
+              "location": "AddBooksStep.deberiaVerUnGranTotalDe(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Agregar libros al carro de compras",
+    "description": "",
+    "id": "agregar-libros-al-carro-de-compras",
+    "keyword": "Feature",
+    "uri": "AddBoooks.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "El usuario inicia sesion en aplicativo de manera exitosa",
+        "description": "",
+        "id": "inicio-de-sesion-exitosa;el-usuario-inicia-sesion-en-aplicativo-de-manera-exitosa",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 80224243,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Que he ingresado a la pagina \"http://sahitest.com/demo/training/login.htm\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://sahitest.com/demo/training/login.htm",
+                  "offset": 30
+                }
+              ],
+              "location": "LoginStep.openPage(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 197749061,
+              "status": "passed"
+            },
+            "line": 8,
             "name": "he Ingresado nombre de usuario y Password",
             "match": {
               "location": "LoginStep.setForm(DataTable)"
@@ -44,24 +195,24 @@
                   "user",
                   "password"
                 ],
-                "line": 15
+                "line": 9
               },
               {
                 "cells": [
                   "test",
                   "secret"
                 ],
-                "line": 17
+                "line": 10
               }
             ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 713383163,
+              "duration": 142190397,
               "status": "passed"
             },
-            "line": 19,
+            "line": 11,
             "name": "de click en el boton login",
             "match": {
               "location": "LoginStep.clickButton()"
@@ -70,10 +221,10 @@
           },
           {
             "result": {
-              "duration": 93398698,
+              "duration": 31040743,
               "status": "passed"
             },
-            "line": 21,
+            "line": 12,
             "name": "deberia acceder al aplicativo",
             "match": {
               "location": "LoginStep.getResult()"
@@ -84,7 +235,7 @@
       }
     ],
     "name": "Inicio de sesion Exitosa",
-    "description": "\nComo usuario del aplicativo quiero acceder a mi vista predeterminda al ingresar \n\nusuario y contraseña correctas",
+    "description": "\nComo usuario del aplicativo quiero acceder a mi vista predeterminda al ingresar \nusuario y contraseña correctas",
     "id": "inicio-de-sesion-exitosa",
     "keyword": "Feature",
     "uri": "Login.feature"

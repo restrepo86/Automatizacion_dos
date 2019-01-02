@@ -36,7 +36,6 @@ public class LoginStep {
 	@Then("deberia acceder al aplicativo")
 	public void getResult() {
 		assertEquals(loginPage.getResultPage(), "Books");
-		loginPage.close();
 	}
 	
 }
